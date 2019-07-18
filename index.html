@@ -6,8 +6,6 @@
 <meta name="keywords" content="Индульгенция людей,Нелинейная интерактивная книга,Книга будущего,Алесь Мищенко,ЭРА МИЛОСЕРДИЯ,ХИРУРГ И ПСИХ,ПРИСНИЛАСЬ ЛЮБОВЬ,КОД САМОУНИЧТОЖЕНИЯ,КВАНТОВЫЕ ЛЮДИ,ДЕТИ И ПАУКИ,УЧЁНЫЙ И ПРИРОДА,СУДЫ И СУДЬБЫ,ЭРОТИЧЕСКИЙ ОСКАР,АВТОРЫ СВОИХ СУДЕБ,ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ,ДОГОВОР С ДЬЯВОЛОМ,ПЛАТА ЗА ВСЁ,ИСПОВЕДЬ ДИКАРЯ,МАТРИЦА МНОГОЭТАЖЕК,ДЕТСТВО НАРОДА,ДНО МОРЯ ЛЮБВИ,НЕСБЫВШЕЕСЯ,НЕОТПРАВЛЕННОЕ ПИСЬМО,НЕУЧ ПРИРОДЫ,ЛЮДИ ЕХАЛИ В ПОЕЗДЕ,ЦЕЛЬ ВСЕХ РАЗГОВОРОВ,РЕКЛАМА РАЯ,УТРО МАРИОНЕТКИ,ЗАМЕНИТЕЛЬ БУДУЩЕГО,ГДЕ У ЛЮДЕЙ КНОПКА,СОН БУДУЩЕГО,КОРОЛИ ВОДОВОРОТОВ,БИРЖА СМЫСЛОВ ЖИЗНИ,ВЗГЛЯД С ФОТОГРАФИИ,ЛЮБОВЬ,СМЕРТЬ,ЭРОС,НАУКА,ТВ,ФАНТАЗИИ,НЕПОНИМАНИЕ,ОБЩЕСТВО,МИРЫ,ИСТОРИЯ,ПРИРОДА,ДУША" />
 <meta name="description" content="Интерактивную книгу будущего ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ можно читать, выбирая порядок текстов, а также фильтруя и сортируя тексты по темам и настроению." />
 <meta property="og:image" content="http://alesmishchenko.github.io/indulgencia/logo.png" />
-<script type='text/javascript' src='illustrate.js'></script>
-<script type='text/javascript' src='initiate.js'></script>
 <style>
 html {transform: translateZ(0);}
 body {background-color: white;
@@ -111,12 +109,25 @@ document.getElementById('idFormh3').style.color = dopolnitCol(document.body.styl
 document.getElementById('idLegendForm').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idEmailh3').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style.backgroundColor);
-if(window.innerWidth>window.innerHeight){
-allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
-}else{
-allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
 
-};changeText(1.1); changeText(0.9); 
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) ){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+testExp = new RegExp('Android|webOS|iPhone|iPad|' +	'BlackBerry|Windows Phone|'  +   'Opera Mini|IEMobile|Mobile' ,  'i');
+if (testExp.test(navigator.userAgent)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(screen.width>screen.height){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(window.innerWidth>window.innerHeight){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+changeText(1.1); changeText(0.9); 
+
+
+
 allign2ids(Math.floor(window.innerWidth*0.9),'idForm');
 allign2ids(Math.floor(window.innerWidth*0.9),'idDivKeywords');
 console.log('idDivUSEkartynkaStaronkaTableJacejkiGart width = '+document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGart').style.width);
@@ -134,7 +145,7 @@ console.log('window.innerHeight = '+window.innerHeight);
 <a class="f3" id="idh2zagolov3" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank >"ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ"</a>
 </h1> 
 <h3 id="idh2zagolov1bis">
-<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nВ квадратном окошке показывается кусочек текущего текста книги. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели(не нажимайте 2 раза, иначе пролистнёте до послеследующей страницы).\nЦветом в текущем тексте показаны связи с другими текстами. Для выбора другого текста нужно нажать на его кнопку в оглавлении. Оглавление располагается после текущего текста и состоит из фраз и кнопок вызова всех текстов.\nТе тексты в оглавлении, которые связаны с текущим текстом, выделены цветом. Текст, связанный с читаемой страницей, обычно сверху, в начале оглавления. Фразы в оглавлении - это переход от текущего текста к связанным с ним текстам. \nРекомендуется читать каждый текст 1ый раз не отвлекаясь на оглавление, а затем 2ой раз просмотреть заинтересовавшие страницы чтобы выбрать следующий текст, развивающий понравившуюся тему. \nРазвивать тему можно также фильтруя оглавление(оставляя в нём только тексты заданной темы). Оглавление можно также сортировать по размеру, оценке, алфавиту, итд(кнопку сортировки иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст. \nИзвестные баги: в некоторых браузерах не показывается ни текст ни оглавление. Просьба о багах сообщать автору и пробовать в другом браузере.\n')">КАК ЧИТАТЬ?</button>
+<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nТЕКУЩИЙ ТЕКСТ(текущий рассказ) книги показывается в квадратном окошке. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели(не нажимайте 2 раза, иначе пролистнёте до послеследующей страницы).\nЦветом в текущем тексте показаны связи с другими текстами. Для выбора другого текста нужно нажать на его кнопку в оглавлении. \nОГЛАВЛЕНИЕ располагается после текущего текста и состоит из фраз и кнопок вызова всех текстов.\nТе тексты в оглавлении, которые связаны с текущим текстом, выделены цветом. Текст, связанный с читаемой страницей, обычно сверху, в начале оглавления. Фразы в оглавлении - это переход от текущего текста к связанным с ним текстам. \nРекомендуется читать каждый текст 1ый раз не отвлекаясь на оглавление, а затем 2ой раз просмотреть заинтересовавшие страницы чтобы выбрать следующий текст, развивающий понравившуюся тему. \nРазвивать тему можно также фильтруя оглавление(оставляя в нём только тексты заданной темы). Оглавление можно также сортировать по размеру, оценке, алфавиту, итд(кнопку сортировки иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст. \nИзвестные баги: в некоторых браузерах не показывается ни текст ни оглавление. Просьба о багах сообщать автору и пробовать в другом браузере.\n')">КАК ЧИТАТЬ?</button>
 &nbsp; &nbsp; Поделиться в соц.сетях:
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 <script src="//yastatic.net/share2/share.js" async="async"></script>
@@ -144,12 +155,11 @@ console.log('window.innerHeight = '+window.innerHeight);
 <!--&nbsp; &nbsp; При медленном листании можно загрузить <a href='https://alesmishchenko.github.io/indulgenсia/'>быструю версию</a>.-->
 &nbsp; &nbsp; Листание кнопками &#9167 , &#x23ea , &#x23e9.
 </h3> 
-
 <!--<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.')">Как читать?</button>-->
-
 <!--<div id="idDivUSEkartynkaStaronkaTableJacejkiGartOuter" style='width:adformShyrynjaHolst+110;float:left;padding-right:10px;'> -->
 
-
+<script type='text/javascript' src='illustrate.js'></script>
+<script type='text/javascript' src='initiate.js'></script>
 
 <div id="idDivUSEkartynkaStaronkaTableJacejkiGart" style="width:adformShyrynjaHolst;border:none;display: table-cell;">
 <div id="idDivUSEkartynkaStaronkaTableJacejkiGartNazva" style="border:none" onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;">
@@ -159,10 +169,10 @@ console.log('window.innerHeight = '+window.innerHeight);
 <div id="idDivOglavANDsortOglav" style='width:632px;display: table-cell;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;"> 
 <fieldset id="idTemyKontur" title="Здесь можно выбрать из оглавления тексты по тем же темам / другим темам (нажатие на кнопку ТЕМЫ оставляет в оглавлении только тексты с выбранной темой / убирает тему из оглавления)">
 <legend id='idLegendTemy'>Фильтры оглавления и Темы текста </legend> 
-  <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="Непрочитанные" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
-  <input type="button" id="idGuzikCreateTable" title="Показать ВСЕ тексты в оглавлении" value="Восстановить всё" onclick="zrabicTZmest();KaliarovyaRadkiPeradBelymi(false); document.getElementById('idLegendZmest').innerHTML='Оглавление и связи с текущим текстом:   ';" /><br/><br/>
+  <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="только НЕПРОЧИТАННЫЕ в оглавлении" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
+  <input type="button" id="idGuzikCreateTable" title="Показать ВСЕ тексты в оглавлении" value="ВСЕ в оглавлении" onclick="zrabicTZmest();KaliarovyaRadkiPeradBelymi(false); document.getElementById('idLegendZmest').innerHTML='Оглавление и связи с текущим текстом:   ';" /><br/><br/>
 <input type="checkbox" id="idGalkaAdsejac"  title="Инвертировать фильтры">
-<label for="idGalkaAdsejac" title="Инвертировать фильтры">Наоборот. &nbsp;&nbsp;&nbsp;&nbsp; выбор ТЕМЫ:</label>
+<label for="idGalkaAdsejac" title="Инвертировать фильтры">Наоборот. &nbsp;&nbsp;&nbsp;&nbsp; показать только тексты тех же ТЕМ(или наоборот):</label>
 </fieldset>
 
 <fieldset> 
@@ -196,6 +206,25 @@ console.log('window.innerHeight = '+window.innerHeight);
 
 
 <script> 
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) ){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+testExp = new RegExp('Android|webOS|iPhone|iPad|' +	'BlackBerry|Windows Phone|'  +   'Opera Mini|IEMobile|Mobile' ,  'i');
+if (testExp.test(navigator.userAgent)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(screen.width>screen.height){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(window.innerWidth>window.innerHeight){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+
+
+
+
 //onclick="fabravacCIubracRadkiPaID(
 function nazatCtobCvet() {
 var strOrig1 = './backOrig/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
